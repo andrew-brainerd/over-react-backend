@@ -13,13 +13,10 @@
     "concurrently": "^3.5.0"
   },
   "scripts": {
-    "start": "yarn dev",
+    "start": "node server.js",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
-    "server": "yarn && nodemon server.js",
-    "client": "cd client && yarn start",
-    "fresh": "yarn && cd client && yarn",
-    "dev": "concurrently --kill-others-on-fail \"yarn server\" \"yarn client\""
+    "dev": "yarn && nodemon server.js"
   }
 }

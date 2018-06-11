@@ -15,7 +15,7 @@ app.get('/api/profile/:userId', (req, res) => {
     
     overwatch.getProfile(platform, region, tag, (profileJson) => {
         console.log('Profile Info for ' + tag);
-        //console.log(JSON.stringify(profileJson, null, 2));
+        console.log(JSON.stringify(profileJson, null, 2));
 
         res.send({ 
             info: profileJson,
@@ -32,7 +32,7 @@ app.get('/api/stats/:userId', (req, res) => {
     const tag = req.params.userId;
     
     overwatch.getStats(platform, region, tag, (statsJson) => {
-        //console.log('Stats for ' + tag);
+        console.log('Stats for ' + tag);
         console.log(JSON.stringify(statsJson.stats.top_heroes, null, 2));
         
         res.send({ 

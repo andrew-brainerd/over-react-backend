@@ -12,6 +12,12 @@ app.use(function (req, res, next) {
     next();
 });
 
+app.get('/api', (req, res) => {
+    res.send({
+        message: 'Welcome to the Over React API!'
+    });
+});
+
 app.get('/api/profile/:userId', (req, res) => {
     const platform = 'pc';
     const region = 'us';

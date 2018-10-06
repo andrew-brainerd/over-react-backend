@@ -12,6 +12,13 @@ app.use(function (req, res, next) {
     next();
 });
 
+app.post('/api', (req, res) => {
+    res.send({
+        message: 'Welcome to the Over React API!'
+    });
+});
+
+
 app.get('/api', (req, res) => {
     res.send({
         message: 'Welcome to the Over React API!'

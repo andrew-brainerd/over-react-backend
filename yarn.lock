@@ -298,7 +298,7 @@ async@^1.4.0, async@^1.5.2:
   version "1.5.2"
   resolved "https://registry.yarnpkg.com/async/-/async-1.5.2.tgz#ec6a61ae56480c0c3cb241c95618e20892f9672a"
 
-async@^2.1.2, async@^2.1.4, async@^2.4.1:
+async@^2.1.2, async@^2.1.4, async@^2.4.1, async@^2.6.1:
   version "2.6.1"
   resolved "https://registry.yarnpkg.com/async/-/async-2.6.1.tgz#b245a23ca71930044ec53fa46aa00a3e87c6a610"
   dependencies:
@@ -4973,13 +4973,15 @@ osenv@^0.1.4:
     os-homedir "^1.0.0"
     os-tmpdir "^1.0.0"
 
-overwatch-api@^0.4.0:
-  version "0.4.0"
-  resolved "https://registry.yarnpkg.com/overwatch-api/-/overwatch-api-0.4.0.tgz#47c1cce3f35516beaa1cf8529feda6c73dea66e1"
+overwatch-api@^0.7.4:
+  version "0.7.4"
+  resolved "https://registry.yarnpkg.com/overwatch-api/-/overwatch-api-0.7.4.tgz#9c9e7776c655882bc332284cb431bebf26124ddf"
   dependencies:
+    async "^2.6.1"
     cheerio "^0.22.0"
     request "^2.74.0"
     request-promise "^4.1.1"
+    svg-builder "^1.0.0"
 
 p-finally@^1.0.0:
   version "1.0.0"
@@ -6577,6 +6579,10 @@ supports-color@^5.3.0, supports-color@^5.4.0:
   resolved "https://registry.yarnpkg.com/supports-color/-/supports-color-5.4.0.tgz#1c6b337402c2137605efe19f10fec390f6faab54"
   dependencies:
     has-flag "^3.0.0"
+
+svg-builder@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/svg-builder/-/svg-builder-1.0.0.tgz#16a3e834780b2319971d2a393c017a5f0fb49c30"
 
 svgo@^0.7.0:
   version "0.7.2"

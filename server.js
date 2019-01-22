@@ -1,6 +1,7 @@
+require('dotenv').config();
 const express = require('express');
-const bodyParser = require('body-parser');
 const overwatch = require('overwatch-api');
+const db = require('./data');
 
 const app = express();
 const port = process.env.PORT || 5000;
@@ -33,6 +34,8 @@ app.get('/api/profile/:userId', (req, res) => {
 
     overwatch.getProfile(platform, region, tag, (err, profileJson) => {
         if (!err) {
+            db.addSearch(tag);
+
             res.send({
                 info: profileJson,
                 message: 'Got Profile!'
@@ -51,9 +54,6 @@ app.get('/api/stats/:userId', (req, res) => {
     const tag = req.params.userId;
 
     overwatch.getStats(platform, region, tag, (err, statsJson) => {
-        console.log(`Stats for ${tag}`);
-        console.log(JSON.stringify(statsJson, null, 2));
-
         if (!err) {
             res.send({
                 stats: statsJson && statsJson.stats,
@@ -74,9 +74,6 @@ app.get('/api/stats/:userId/combat', (req, res) => {
     const tag = req.params.userId;
 
     overwatch.getStats(platform, region, tag, (statsJson) => {
-        console.log(`Stats for ${tag}`);
-        console.log(JSON.stringify(statsJson.stats, null, 2));
-
         res.send({
             stats: statsJson.stats.combat,
             message: 'Got Combat Stats!'

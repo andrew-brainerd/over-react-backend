@@ -3,20 +3,17 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "overwatch-api": "^0.7.4",
-    "react": "^16.4.0",
-    "react-dom": "^16.4.0",
-    "react-scripts": "1.1.4",
-    "express": "^4.16.3"
+    "chalk": "^2.4.2",
+    "dotenv": "^6.2.0",
+    "express": "^4.16.3",
+    "mongodb": "^3.1.12",
+    "overwatch-api": "^0.7.4"
   },
   "devDependencies": {
     "concurrently": "^3.5.0"
   },
   "scripts": {
     "start": "node server.js",
-    "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject",
     "dev": "yarn && nodemon server.js"
   }
 }

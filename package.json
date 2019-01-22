@@ -3,8 +3,11 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "overwatch-api": "^0.7.4",
-    "express": "^4.16.3"
+    "chalk": "^2.4.2",
+    "dotenv": "^6.2.0",
+    "express": "^4.16.3",
+    "mongodb": "^3.1.12",
+    "overwatch-api": "^0.7.4"
   },
   "devDependencies": {
     "concurrently": "^3.5.0"

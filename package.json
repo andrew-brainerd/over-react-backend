@@ -4,9 +4,6 @@
   "private": true,
   "dependencies": {
     "overwatch-api": "^0.7.4",
-    "react": "^16.4.0",
-    "react-dom": "^16.4.0",
-    "react-scripts": "1.1.4",
     "express": "^4.16.3"
   },
   "devDependencies": {
@@ -14,9 +11,10 @@
   },
   "scripts": {
     "start": "node server.js",
-    "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject",
     "dev": "yarn && nodemon server.js"
+  },
+  "engines": {
+    "node": "16.17.0",
+    "npm": "8.15.0"
   }
 }
